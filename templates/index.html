@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Index oldal</title>
+{% endblock title %}
+
+{% block content %}
+    <p>Ez az index oldal</p>
+    <p> 5*7={{jinjaszorzat}}</p>
+    <p> szerverido: {{szerverido}}</p>
+
+    {% if veletlenszam > 7 %}
+        <p class="nagyobb">{{veletlenszam}}</p>
+    {% else %}
+        <p class="kevesebb">{{veletlenszam}}</p>
+    {% endif %}
+
+{% endblock content %}

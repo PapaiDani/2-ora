@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>About oldal</title>
+{% endblock title %}
+
+{% block content %}
+    <p>Ez az about oldal</p>
+<br><br>
+ Megyék ahol laktam és hány évet:
+    <table>
+        {% for megye in megyek %}
+        <tr>
+            {{ megye|safe }}
+        <tr/>
+    {% endfor %}
+    </table>
+{% endblock content %}
